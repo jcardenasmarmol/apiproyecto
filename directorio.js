@@ -1,0 +1,1 @@
+exports["directorio"] = __dirname;
