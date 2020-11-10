@@ -1,6 +1,6 @@
 // import mongoose from "mongoose";
 // //BD CONTAMINANTES
-// mongoose.connect('mongodb+srv://aire:aire@cluster0-sentg.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true } );
+// mongoose.connect('mongodb+srv://aire', {useNewUrlParser: true, useUnifiedTopology: true } );
 
 // const connection = mongoose.connection;
 // connection.on('error', console.error.bind(console, 'Error de Conexión: '));
@@ -19,7 +19,7 @@ var db = null
 export async function connectHistoricos() {
     if (db == null) {
         try {
-            const client = await MongoClient.connect('mongodb+srv://aire:aire@cluster0-sentg.mongodb.net/test?retryWrites=true&w=majority',{useUnifiedTopology: true});
+            const client = await MongoClient.connect('mongodb+srv://aire',{useUnifiedTopology: true});
             db = client.db('test');
             console.log('DB aireHistoricos is connected')
             return db;
