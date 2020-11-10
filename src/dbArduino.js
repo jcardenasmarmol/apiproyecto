@@ -4,7 +4,7 @@ var db = null
 export async function connectArduino() {
     if (db == null){
         try {
-            const client = await MongoClient.connect('mongodb+srv://userRODB:QaqfW1SovAXtBDWh@cluster0-mms5n.mongodb.net/DatosCalidadAire?retryWrites=true&w=majority',{useUnifiedTopology: true});
+            const client = await MongoClient.connect('mongodb+srv://',{useUnifiedTopology: true});
             db = client.db('DatosCalidadAire');
             console.log('DB calidadAire is connected')
             return db;
